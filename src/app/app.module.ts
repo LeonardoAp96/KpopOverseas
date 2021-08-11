@@ -4,13 +4,10 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage-angular';
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,9 +16,7 @@ import { environment } from 'src/environments/environment';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule, 
-    IonicStorageModule.forRoot(),
-    AngularFireModule.initializeApp (environment.firebase), 
-    AngularFireDatabaseModule
+    IonicStorageModule.forRoot()
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
