@@ -18,54 +18,57 @@
 
   <ion-radio-group radio-group [(ngModel)]="Weeks" (ionChange)="SelectWeeks(Weeks)">
     <ion-row>
-      <ion-label>Semana:</ion-label>
-    </ion-row>
-    <ion-row>
-      <ion-col size="1">
-        <ion-label>1 </ion-label>
+      <ion-col size="2">
+        <ion-label>Semana 1 </ion-label>
         <ion-radio value="1" ionSelect="SelectWeeks(1)" checked></ion-radio>
       </ion-col>
-      <ion-col size="1">
-        <ion-label>2 </ion-label>
+      <ion-col size="2">
+        <ion-label>Semana 2 </ion-label>
         <ion-radio value="2" (ionSelect)="SelectWeeks(2)"></ion-radio>
       </ion-col>
-      <ion-col size="1">
-        <ion-label>3 </ion-label>
+      <ion-col size="2">
+        <ion-label>Semana 3 </ion-label>
         <ion-radio value="3" (ionSelect)="SelectWeeks(3)"></ion-radio>
       </ion-col>
-      <ion-col size="1">
-        <ion-label>4 </ion-label>
+      <ion-col size="2">
+        <ion-label>Semana 4 </ion-label>
         <ion-radio value="4" (ionSelect)="SelectWeeks(4)"></ion-radio>
       </ion-col>
-      <ion-col size="1">
-        <ion-label>5 </ion-label>
+      <ion-col size="2">
+        <ion-label>Semana 5 </ion-label>
         <ion-radio value="5" (ionSelect)="SelectWeeks(5)"></ion-radio>
       </ion-col>
     </ion-row>
   </ion-radio-group>
 
+
+
   <ion-list>
-    <ion-item *ngFor="let card of listCardsRadar">
-      <ion-card>
-        <ion-card-header>
-          <ion-row>
-            <ion-thumbnail>
-              <ion-img [src]="card.imagem"></ion-img>
-            </ion-thumbnail>
-            <ion-col>
-              <ion-card-subtitle>{{card.NomeArtista}}</ion-card-subtitle>
-              <ion-card-title>{{card.NomeMusica}}</ion-card-title>
+    <ion-list *ngFor="let card of listCardsRadar">
+      <ion-item>{{card.data}}</ion-item>
+      <ion-item *ngFor="let musics of card.musicas" color="light">
+        <ion-grid>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="2">
+              <ion-thumbnail>
+                <ion-img [src]="musics.imagem" wid></ion-img>
+              </ion-thumbnail>
+            </ion-col>
+            <ion-col class="ion-align-self-center">
+              <ion-label>{{musics.NomeArtista}}</ion-label>
+              <ion-label>{{musics.NomeMusica}}</ion-label>
+              <p>{{musics.Descricao}}</p>
             </ion-col>
             <ion-col>
-              <a [href]="card.url" target="_blank">
+              <a [href]="musics.url" target="_blank">
                 <ion-button expand="full" shape="round">Assistir</ion-button>
               </a>
             </ion-col>
           </ion-row>
-        </ion-card-header>
-        <ion-card-content>{{card.Descricao}} </ion-card-content>
-      </ion-card>
-    </ion-item>
+        </ion-grid>
+      </ion-item>
+
+    </ion-list>
   </ion-list>
 
   <p class="ion-padding-start ion-padding-end">

@@ -9,20 +9,15 @@ export interface CardsRadar{
   Descricao?: String
 }
 export interface WeekRadar{
-  d1?:{musicas?:CardsRadar[], data?: any},
-  d2?:{musicas?:CardsRadar[], data?: any},
-  d3?:{musicas?:CardsRadar[], data?: any},
-  d4?:{musicas?:CardsRadar[], data?: any},
-  d5?:{musicas?:CardsRadar[], data?: any},
-  d6?:{musicas?:CardsRadar[], data?: any},
-  d7?:{musicas?:CardsRadar[], data?: any}
+  musicas?:CardsRadar[], 
+  data?: String
 }
 export interface MonthRadar{
-  week1?:WeekRadar,
-  week2?:WeekRadar,
-  week3?:WeekRadar,
-  week4?:WeekRadar,
-  week5?:WeekRadar
+  week1?:WeekRadar[],
+  week2?:WeekRadar[],
+  week3?:WeekRadar[],
+  week4?:WeekRadar[],
+  week5?:WeekRadar[]
 }
 
 @Injectable({
@@ -31,7 +26,6 @@ export interface MonthRadar{
 export class StorageService {
   
   public listCardsRadar : CardsRadar[];
-  public kpopoverseasAugust : MonthRadar;
 
   constructor(private storage: Storage){
   }
@@ -85,7 +79,5 @@ export class StorageService {
     ]
     return this.listCardsRadar;
   }
-
-
 
 }
