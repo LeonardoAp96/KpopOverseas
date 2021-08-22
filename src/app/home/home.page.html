@@ -12,9 +12,37 @@
   <h2>KpopOverseas Radar</h2>
   <p class="ion-padding-start ion-padding-end">
     <ion-button (click)="scrollToBottom()" expand="block" fill="outline">
-    Ir para Baixo
+      Ir para Baixo
     </ion-button>
   </p>
+
+  <ion-radio-group radio-group [(ngModel)]="Weeks" (ionChange)="SelectWeeks(Weeks)">
+    <ion-row>
+      <ion-label>Semana:</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1">
+        <ion-label>1 </ion-label>
+        <ion-radio value="1" ionSelect="SelectWeeks(1)" checked></ion-radio>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>2 </ion-label>
+        <ion-radio value="2" (ionSelect)="SelectWeeks(2)"></ion-radio>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>3 </ion-label>
+        <ion-radio value="3" (ionSelect)="SelectWeeks(3)"></ion-radio>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>4 </ion-label>
+        <ion-radio value="4" (ionSelect)="SelectWeeks(4)"></ion-radio>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>5 </ion-label>
+        <ion-radio value="5" (ionSelect)="SelectWeeks(5)"></ion-radio>
+      </ion-col>
+    </ion-row>
+  </ion-radio-group>
 
   <ion-list>
     <ion-item *ngFor="let card of listCardsRadar">
@@ -42,7 +70,7 @@
 
   <p class="ion-padding-start ion-padding-end">
     <ion-button (click)="scrollToTop()" expand="block" fill="outline">
-    Ir para Cima
+      Ir para Cima
     </ion-button>
   </p>
 

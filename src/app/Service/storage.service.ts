@@ -1,12 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 
-interface CardsRadar{
-  imagem: String;
-  url: String;
-  NomeMusica: String;
-  NomeArtista: String[];
-  Descricao: String;
+export interface CardsRadar{
+  imagem?: String,
+  url?: String,
+  NomeMusica?: String,
+  NomeArtista?: String[],
+  Descricao?: String
+}
+export interface WeekRadar{
+  d1?:{musicas?:CardsRadar[], data?: any},
+  d2?:{musicas?:CardsRadar[], data?: any},
+  d3?:{musicas?:CardsRadar[], data?: any},
+  d4?:{musicas?:CardsRadar[], data?: any},
+  d5?:{musicas?:CardsRadar[], data?: any},
+  d6?:{musicas?:CardsRadar[], data?: any},
+  d7?:{musicas?:CardsRadar[], data?: any}
+}
+export interface MonthRadar{
+  week1?:WeekRadar,
+  week2?:WeekRadar,
+  week3?:WeekRadar,
+  week4?:WeekRadar,
+  week5?:WeekRadar
 }
 
 @Injectable({
@@ -15,14 +31,15 @@ interface CardsRadar{
 export class StorageService {
   
   public listCardsRadar : CardsRadar[];
-  collectionName = 'Students';
+  public kpopoverseasAugust : MonthRadar;
 
   constructor(private storage: Storage){
-    
   }
 
   public PopularWeek(){
-    this.listCardsRadar = [
+
+    this.listCardsRadar = 
+    [
       {
         imagem: "assets/icon/logo.png",
         url: "https://youtu.be/ffwAKz_J5uE",
@@ -66,6 +83,9 @@ export class StorageService {
         Descricao: "Boazin"
       }
     ]
+    return this.listCardsRadar;
   }
+
+
 
 }

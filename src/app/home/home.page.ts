@@ -1,16 +1,5 @@
-import { StorageService } from './../Service/storage.service';
+import { StorageService, CardsRadar, MonthRadar, WeekRadar } from './../Service/storage.service';
 import { Component } from '@angular/core';
-interface CardsRadar{
-  imagem: String;
-  url: String;
-  NomeMusica: String;
-  NomeArtista: String[];
-  Descricao: String;
-}interface StudentData {
-  Name: string;
-  Age: number;
-  Address: string;
-}
 
 @Component({
   selector: 'app-home',
@@ -19,19 +8,24 @@ interface CardsRadar{
 })
 export class HomePage {
 
-  // constructor(private storage: StorageService,
-  //   private firebaseService: FirebaseService,
-  //   public fb: FormBuilder
-  // ) {
-  //   this.listCardsRadar = storage.listCardsRadar;
-  //   this.studentData = {} as StudentData;
-  // }
+  public Weeks: number;
 
+  public kpopoverseas : MonthRadar={week1:{d1:{}}};
+  
   public listCardsRadar : CardsRadar[];
-  constructor(){
-    this.PopularWeek();
+  constructor(private storage: StorageService){
+    debugger
+    this.createMonthAugust();
+    
+    this.listCardsRadar = this.kpopoverseas.week1.d1.musicas;
   }
 
+  ionViewWillEnter(){
+  }
+
+  public SelectWeeks(week: number){
+    console.log("Hi" + week);
+  }
 
   public getContent() {
     return document.querySelector('ion-content');
@@ -45,52 +39,14 @@ export class HomePage {
     this.getContent().scrollToTop(500);
   }
 
-  public PopularWeek(){
-        this.listCardsRadar = [
-          {
-            imagem: "assets/icon/logo.png",
-            url: "https://youtu.be/ffwAKz_J5uE",
-            NomeArtista: ["Jisoo(lovelyz)"],
-            NomeMusica: "Pet",
-            Descricao: "Boazin"
-          },
-          {
-            imagem: "assets/image/gwsn.jpg",
-            url: "https://youtu.be/ffwAKz_J5uE",
-            NomeArtista: ["Jisoo(lovelyz)"],
-            NomeMusica: "Pet",
-            Descricao: "Boazin"
-          },
-          {
-            imagem: "assets/image/yukika.png",
-            url: "https://youtu.be/ffwAKz_J5uE",
-            NomeArtista: ["Jisoo(lovelyz)"],
-            NomeMusica: "Pet",
-            Descricao: "Boazin"
-          },
-          {
-            imagem: "assets/icon/logo.png",
-            url: "https://youtu.be/ffwAKz_J5uE",
-            NomeArtista: ["Jisoo(lovelyz)"],
-            NomeMusica: "Pet",
-            Descricao: "Boazin"
-          },
-          {
-            imagem: "assets/icon/logo.png",
-            url: "https://youtu.be/ffwAKz_J5uE",
-            NomeArtista: ["Jisoo(lovelyz)"],
-            NomeMusica: "Pet",
-            Descricao: "Boazin"
-          },
-          {
-            imagem: "assets/icon/logo.png",
-            url: "https://youtu.be/ffwAKz_J5uE",
-            NomeArtista: ["Jisoo(lovelyz)"],
-            NomeMusica: "Pet",
-            Descricao: "Boazin"
-          }
-        ]
-      }
-    
-
+  public createMonthAugust(){
+    this.kpopoverseas.week1.d1.musicas = [
+      {url: "https://youtu.be/ffwAKz_J5uE", NomeArtista: ["Jisoo(lovelyz)"],NomeMusica: "Pet"},
+      {url: "https://youtu.be/ffwAKz_J5uE", NomeArtista: ["Jisoo(lovelyz)"],NomeMusica: "Pet"},
+      {url: "https://youtu.be/ffwAKz_J5uE", NomeArtista: ["Jisoo(lovelyz)"],NomeMusica: "Pet"},
+      {url: "https://youtu.be/ffwAKz_J5uE", NomeArtista: ["Jisoo(lovelyz)"],NomeMusica: "Pet"},
+      {url: "https://youtu.be/ffwAKz_J5uE", NomeArtista: ["Jisoo(lovelyz)"],NomeMusica: "Pet"},
+    ];
+    this.kpopoverseas.week1.d1.data = x=>{return"01/08"};
+  }
 }
