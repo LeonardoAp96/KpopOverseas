@@ -328,38 +328,75 @@ export class HomePage {
       {url: "https://youtu.be/-H5y6wM2v-o", NomeArtista: ["Jade.L"],NomeMusica: "Every Life is Ruined", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/qSvPwTfpEOk", NomeArtista: ["Your Song"],NomeMusica: "Piano Man", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/8SU4O8OMuHQ", NomeArtista: ["Gray","meenoi"],NomeMusica: "Eternal Sunshine", imagem: "assets/icon/logo.png"},
+      //{url: "https://youtu.be/DtTejicVcv0", NomeArtista: ["Ravi","부끄뚱 "],NomeMusica: "은근히 낯가려요", imagem: "assets/icon/logo.png"},
       
     ],data : "22/08"}
     );
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/XDQ19PO69C4", NomeArtista: ["Kyung dasom"],NomeMusica: "My way", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/ZIZECe-55HY", NomeArtista: ["Brave Girls"],NomeMusica: "After We Ride", imagem: "assets/icon/logo.png"},
+      
+      //{url: "https://youtu.be/EaswWiwMVs8", NomeArtista: ["Stray Kids"],NomeMusica: "소리꾼", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/K-0mbJGWA-k", NomeArtista: ["T1419"],NomeMusica: "Flex", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/0PIT0CAAhA4", NomeArtista: ["Verivery"],NomeMusica: "Trigger", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/U_hkUZuphyo", NomeArtista: ["Austn"],NomeMusica: "take me out", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/kaiPw5cVipw", NomeArtista: ["Tamiz"],NomeMusica: "Let's Look Away Like Stars", imagem: "assets/icon/logo.png"},
     ],data : "23/08"}
     );
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/QMwJtMJLXE0", NomeArtista: ["CL"],NomeMusica: "Spicy", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/RRizK5QYZeo", NomeArtista: ["Kwon Eunbi"],NomeMusica: "Door", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/sNJ6CzRce6Q", NomeArtista: ["Soo Yeony"],NomeMusica: "love u too much !", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/Lo7izYx_MZk", NomeArtista: ["Youha"],NomeMusica: "Ice T", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/Xrmw_mqKEno", NomeArtista: ["Monday (Weeekly)"],NomeMusica: "Like A Star", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/49TqM7q6KDs", NomeArtista: ["Yella.E"],NomeMusica: "Rider", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/9FFc6zewAp8", NomeArtista: ["ara"],NomeMusica: "Reason", imagem: "assets/icon/logo.png"},
+      
+      {url: "https://youtu.be/IiAIiZmP7AM", NomeArtista: ["STI"],NomeMusica: "Wait For Rainbow", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/WvcKfr6X6Fs", NomeArtista: ["Colde"],NomeMusica: "It's You", imagem: "assets/icon/logo.png"},
+      //{url: "https://youtu.be/-M__Nh-HvmA", NomeArtista: ["Loco"],NomeMusica: "이대로만", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/BkDzgVoal_k", NomeArtista: ["Wooks"],NomeMusica: "Summer Is Gone", imagem: "assets/icon/logo.png"},
     ],data : "24/08"}
     );
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/JZmBo1EQnlE", NomeArtista: ["Everglow"],NomeMusica: "Promise", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/HQV4Nkuwqao", NomeArtista: ["Choi Cello"],NomeMusica: "Thirsty", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/YUuGTyAlO_M", NomeArtista: ["Jungtune", "Woojae"],NomeMusica: "Highball dreams", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/nIbVB95TQ2c", NomeArtista: ["Yegny", "Huckleberry P"],NomeMusica: "Better Rush", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/PWn0v1F3uoo", NomeArtista: ["Kang Boram"],NomeMusica: "Your Face", imagem: "assets/icon/logo.png"},
+      
+      {url: "https://youtu.be/jlgSN_LO0lA", NomeArtista: ["Mirae"],NomeMusica: "Splash", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/rIuM8mz6c-8", NomeArtista: ["Changjo"],NomeMusica: "Hurting U", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/hLiM_EkC98c", NomeArtista: ["D'tour"],NomeMusica: "Get Ready", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/6cGXYDT3eQE", NomeArtista: ["Lee Chan Won"],NomeMusica: "Convenience store", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/EuUWzoADf8g", NomeArtista: ["from all to human", "COFFEE BIG"],NomeMusica: "My Sweety", imagem: "assets/icon/logo.png"},
     ],data : "25/08"}
     );
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/67iTTqOk6Dk", NomeArtista: ["Yongyong"],NomeMusica: "Rain Star", imagem: "assets/icon/logo.png"},
+
+      {url: "https://youtu.be/SB2lvmWKE7A", NomeArtista: ["Car, the garden"],NomeMusica: "Closely Far Away", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/UoOWo8AFoh4", NomeArtista: ["Kwon Inha"],NomeMusica: "wherever I Go", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/4gdYpIuWw8c", NomeArtista: ["Dept"],NomeMusica: "perfect day", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/6WlFB05IYes", NomeArtista: ["Lee Mujin"],NomeMusica: "Scent of the day", imagem: "assets/icon/logo.png"},
     ],data : "26/08"}
     );
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/7j_XRt2YeG4", NomeArtista: ["Dain"],NomeMusica: "No filter", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/WKqBvatmOD4", NomeArtista: ["Nody Cika"],NomeMusica: "Birthday", imagem: "assets/icon/logo.png"},
+      //{url: "https://youtu.be/idza42E5QcQ", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/BBu2_qF20Nw", NomeArtista: ["BBA"],NomeMusica: "Hey Disco", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/WD6xBl8YhA8", NomeArtista: ["J.Season", "Sohee (ELRIS)"],NomeMusica: "Love X Lie", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/mIzEzWQTxzo", NomeArtista: ["Sujin", "Ryu Sera"],NomeMusica: "signs to break up", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/cxMek2IEflE", NomeArtista: ["yourbeagle"],NomeMusica: "Baby", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/6ON-GNlCy68", NomeArtista: ["Kriz"],NomeMusica: "Chaser", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/KmOVNVZEP9o", NomeArtista: ["LeeHi"],NomeMusica: "Only", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/V7FJw5U57cE", NomeArtista: ["Kim Sawol"],NomeMusica: "Someone Like You", imagem: "assets/icon/logo.png"},
     ],data : "27/08"}
     );
 
