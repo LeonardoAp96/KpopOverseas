@@ -3,21 +3,22 @@ import { Storage } from '@ionic/storage-angular';
 
 export interface CardsRadar{
   imagem?: String,
-  url?: String,
-  NomeMusica?: String,
-  NomeArtista?: String[],
+  url: String,
+  NomeMusica: String,
+  NomeArtista: String[],
   Descricao?: String
 }
+export interface DayRadar{
+  musicas:CardsRadar[], 
+  data: String
+}
 export interface WeekRadar{
-  musicas?:CardsRadar[], 
-  data?: String
+  dia:DayRadar[],
+  weekNumber: String
 }
 export interface MonthRadar{
-  week1?:WeekRadar[],
-  week2?:WeekRadar[],
-  week3?:WeekRadar[],
-  week4?:WeekRadar[],
-  week5?:WeekRadar[]
+  weeks?:WeekRadar[],
+  nameMonth:String
 }
 
 @Injectable({

@@ -1,4 +1,4 @@
-import { StorageService, CardsRadar, MonthRadar, WeekRadar } from './../Service/storage.service';
+import { StorageService, CardsRadar, MonthRadar, WeekRadar, DayRadar } from './../Service/storage.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,20 +9,23 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   public Weeks: number;
-
+  public nameMonth: String;
   public kpopoverseas : MonthRadar[] = [];
   
-  public listCardsRadar : WeekRadar[];
+  public listCardsRadar : WeekRadar;
+
   constructor(private storage: StorageService){
     
     this.PreencherMonths(12);
     this.createMonthAugust();
+    this.Weeks = 1;
     
-    this.listCardsRadar = this.kpopoverseas[8].week2;
+    this.listCardsRadar = this.kpopoverseas[7].weeks[this.Weeks-1];
+    this.nameMonth = this.kpopoverseas[7].nameMonth;
   }
 
   public SelectWeeks(week: number){
-    console.log("Hi" + week);
+    this.listCardsRadar = this.kpopoverseas[7].weeks[week-1];
   }
 
   public getContent() {
@@ -38,28 +41,54 @@ export class HomePage {
   }
 
   public PreencherMonths(count : number){
-    if(count > 0){
-      
-    this.kpopoverseas.push({week1:[],
-      week2:[],
-      week3:[],
-      week4:[],
-      week5:[]});
-      count--;
-      this.PreencherMonths(count);
+    for(let num = 0; num <= count; num++) {
+      this.kpopoverseas.push({weeks:[], nameMonth:this.nameMonthByNumber(num)});
+      this.kpopoverseas[num].weeks.push({dia:[], weekNumber:"1"});
+      this.kpopoverseas[num].weeks[0].dia.push({musicas:[], data:""});
     }
   }
 
+  public nameMonthByNumber(number: Number){
+    let nome:String="";
+    switch(number){
+      case 0: {nome="Janeiro";break;}
+      case 1: {nome="Fevereiro";break;}
+      case 2: {nome="Março";break;}
+      case 3: {nome="Abril";break;}
+      case 4: {nome="Maio";break;}
+      case 5: {nome="Junho";break;}
+      case 6: {nome="Julho";break;}
+      case 7: {nome="Agosto";break;}
+      case 8: {nome="Setembro";break;}
+      case 9: {nome="Outubro";break;}
+      case 10: {nome="Novembro";break;}
+      case 11: {nome="Dezembro";break;}
+      default: {nome="Nothing";break;}
+    }
+    return nome;
+  }
+
   public createMonthAugust(){
-    this.createAugustWeek1();
-    this.createAugustWeek2();
-    this.createAugustWeek3();
-    this.createAugustWeek4();
-    this.createAugustWeek5();
+
+    debugger
+    let num : DayRadar[] = this.createAugustWeek1();
+    this.kpopoverseas[7].weeks[0].dia = num;
+
+    num = this.createAugustWeek2();
+    this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"2"});
+    
+    num = this.createAugustWeek3();
+    this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"3"});
+
+    num = this.createAugustWeek4();
+    this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"4"});
+
+    num = this.createAugustWeek5();
+    this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"5"});
   }
   
   public createAugustWeek1(){
-    var week = this.kpopoverseas[8].week1;
+    var week: DayRadar[] = [];
 
     week.push({musicas: [
       {url: "https://youtu.be/NjRSajtkaWs", NomeArtista: ["Rocoberry"],NomeMusica: "What is love?", imagem: "assets/icon/logo.png"},
@@ -124,12 +153,11 @@ export class HomePage {
     ],data : "07/08"}
     );
 
-    
-    this.kpopoverseas[8].week1 = week;
+    return week;
   }
 
   public createAugustWeek2(){
-    var week = this.kpopoverseas[8].week2;
+    var week: DayRadar[] = [];
 
     week.push({musicas: [
       {url: "https://youtu.be/Is4Xv3vQSXU", NomeArtista: ["Kris Kim"],NomeMusica: "Faith Is A Lie", imagem: "assets/icon/logo.png"},
@@ -208,11 +236,11 @@ export class HomePage {
     ],data : "14/08"}
     );
 
-    this.kpopoverseas[8].week2 = week;
+    return week;
   }
 
   public createAugustWeek3(){
-    var week = this.kpopoverseas[8].week3;
+    var week: DayRadar[] = [];
 
     week.push({musicas: [
       {url: "https://youtu.be/vfKBW23_C2s", NomeArtista: ["SLAY","AVIN"],NomeMusica: "Love, This", imagem: "assets/icon/logo.png"},
@@ -288,11 +316,11 @@ export class HomePage {
     ],data : "21/08"}
     );
     
-    this.kpopoverseas[8].week3 = week;
+    return week;
   }
 
   public createAugustWeek4(){
-    var week = this.kpopoverseas[8].week4;
+    var week: DayRadar[] = [];
 
     week.push({musicas: [
       {url: "https://youtu.be/FLt582SB2ds", NomeArtista: ["Ants"],NomeMusica: "I know", imagem: "assets/icon/logo.png"},
@@ -341,11 +369,11 @@ export class HomePage {
     ],data : "28/08"}
     );
 
-    this.kpopoverseas[8].week4 = week;
+    return week;
   }
 
   public createAugustWeek5(){
-    var week = this.kpopoverseas[8].week5;
+    var week: DayRadar[] = [];
 
     week.push({musicas: [
       {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
@@ -366,6 +394,6 @@ export class HomePage {
     ],data : "31/08"}
     );
    
-    this.kpopoverseas[8].week5 = week;
+    return week;
   }
 }
