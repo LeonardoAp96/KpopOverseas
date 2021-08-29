@@ -17,13 +17,17 @@ export class HomePage {
   constructor(private storage: StorageService){
     
     this.PreencherMonths(12);
-    this.createMonthAugust();
     this.Weeks = 1;
+    this.createMonthAugust(true);
     
     this.listCardsRadar = this.kpopoverseas[7].weeks[this.Weeks-1];
     this.nameMonth = this.kpopoverseas[7].nameMonth;
   }
 
+  ionViewDidEnter(){
+    this.createMonthAugust(false);
+  }
+  
   public SelectWeeks(week: number){
     this.listCardsRadar = this.kpopoverseas[7].weeks[week-1];
   }
@@ -68,25 +72,25 @@ export class HomePage {
     return nome;
   }
 
-  public createMonthAugust(){
+  public createMonthAugust(number: Boolean){
 
-    debugger
     let num : DayRadar[] = this.createAugustWeek1();
     this.kpopoverseas[7].weeks[0].dia = num;
 
-    num = this.createAugustWeek2();
-    this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"2"});
-    
-    num = this.createAugustWeek3();
-    this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"3"});
+    if(!number){
+      num = this.createAugustWeek2();
+      this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"2"});
+      
+      num = this.createAugustWeek3();
+      this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"3"});
 
-    num = this.createAugustWeek4();
-    this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"4"});
+      num = this.createAugustWeek4();
+      this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"4"});
 
-    num = this.createAugustWeek5();
-    this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"5"});
+      num = this.createAugustWeek5();
+      this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"5"});
+    }
   }
-  
   public createAugustWeek1(){
     var week: DayRadar[] = [];
 
@@ -383,6 +387,7 @@ export class HomePage {
       {url: "https://youtu.be/UoOWo8AFoh4", NomeArtista: ["Kwon Inha"],NomeMusica: "wherever I Go", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/4gdYpIuWw8c", NomeArtista: ["Dept"],NomeMusica: "perfect day", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/6WlFB05IYes", NomeArtista: ["Lee Mujin"],NomeMusica: "Scent of the day", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/L7QlZd11vP0", NomeArtista: ["CIELOGROOVE", "Ariaz", "Eson"],NomeMusica: "U", imagem: "assets/icon/logo.png"},
     ],data : "26/08"}
     );
 
@@ -393,7 +398,7 @@ export class HomePage {
       {url: "https://youtu.be/BBu2_qF20Nw", NomeArtista: ["BBA"],NomeMusica: "Hey Disco", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/WD6xBl8YhA8", NomeArtista: ["J.Season", "Sohee (ELRIS)"],NomeMusica: "Love X Lie", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/mIzEzWQTxzo", NomeArtista: ["Sujin", "Ryu Sera"],NomeMusica: "signs to break up", imagem: "assets/icon/logo.png"},
-      {url: "https://youtu.be/cxMek2IEflE", NomeArtista: ["yourbeagle"],NomeMusica: "Baby", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/KTlG9ZDFlYI", NomeArtista: ["Jessica Jung"],NomeMusica: "Can't Sleep", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/6ON-GNlCy68", NomeArtista: ["Kriz"],NomeMusica: "Chaser", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/KmOVNVZEP9o", NomeArtista: ["LeeHi"],NomeMusica: "Only", imagem: "assets/icon/logo.png"},
       {url: "https://youtu.be/V7FJw5U57cE", NomeArtista: ["Kim Sawol"],NomeMusica: "Someone Like You", imagem: "assets/icon/logo.png"},
@@ -401,8 +406,10 @@ export class HomePage {
     );
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/0RN7jqCTHJs", NomeArtista: ["Wisue"],NomeMusica: "Dear my last summer", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/GHn6ATO9yBE", NomeArtista: ["Kim Yuna"],NomeMusica: "Coral", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/oOTi-2IqwZ8", NomeArtista: ["Ha Hyunsang"],NomeMusica: "Burning Sunset", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/6BcToUHCP48", NomeArtista: ["Due"],NomeMusica: "DrawBack", imagem: "assets/icon/logo.png"},
     ],data : "28/08"}
     );
 
@@ -413,8 +420,11 @@ export class HomePage {
     var week: DayRadar[] = [];
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"}
+      {url: "https://youtu.be/d5w6oDMbQgQ", NomeArtista: ["Park EunByul"],NomeMusica: "Your night in me", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/vymFX6cUZPo", NomeArtista: ["Yourbeagle"],NomeMusica: "Baby", imagem: "assets/icon/logo.png"},
+
+      {url: "https://youtu.be/Pd-lH9uRTQg", NomeArtista: ["Yen"],NomeMusica: "First Snowfall in September", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/K1Y9sRHWy5w", NomeArtista: ["Hwihyun"],NomeMusica: "I Miss You", imagem: "assets/icon/logo.png"}
     ],data : "29/08"}
     );
 
