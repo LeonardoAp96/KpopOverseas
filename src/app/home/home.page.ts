@@ -27,7 +27,12 @@ export class HomePage {
   ionViewDidEnter(){
     this.createMonthAugust(false);
   }
-  
+  public ConvertImg(url: String){
+    let str = url.split('/');
+
+    return "https://i.ytimg.com/vi/" + str[str.length-1] + "/maxresdefault.jpg";
+  }
+
   public SelectWeeks(week: number){
     this.listCardsRadar = this.kpopoverseas[7].weeks[week-1];
   }
@@ -429,15 +434,27 @@ export class HomePage {
     );
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/sz2Dmo1_BjM", NomeArtista: ["Key", "Tayeon"],NomeMusica: "Hate that...", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/FsU33YTcgIE", NomeArtista: ["Kissxs", "픽보이"],NomeMusica: "Hands On Me", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/6FKjVspmU-s", NomeArtista: ["KittiB", "유성은"],NomeMusica: "we you", imagem: "assets/icon/logo.png"},
+
+      {url: "https://youtu.be/6zsy0Er9w0s", NomeArtista: ["kimparkjeje"],NomeMusica: "dong dong", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/32TF6_tJ9Ac", NomeArtista: ["POLYP "],NomeMusica: "DAWN808", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/vLIFMsXOoQM", NomeArtista: ["EMBER RECORDS"],NomeMusica: "Ember", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/8sY7uUMkFdo", NomeArtista: ["SUNGMIN "],NomeMusica: "Blooming", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/kxIS0RfF_bU", NomeArtista: ["Ha Hyun Sang"],NomeMusica: "Stone", imagem: "assets/icon/logo.png"},
     ],data : "30/08"}
     );
 
     week.push({musicas: [
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
-      {url: "", NomeArtista: [""],NomeMusica: "", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/J2RIVVOI__A", NomeArtista: ["Seasoning"],NomeMusica: "Paradise", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/t7v55lCIu9o", NomeArtista: ["Rojo"],NomeMusica: "Purple Wave", imagem: "assets/icon/logo.png"},
+      
+      {url: "https://youtu.be/Ak79F21AEgc", NomeArtista: ["MCND"],NomeMusica: "Movin'", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/hbtR1OmJJmM", NomeArtista: ["Knockloud"],NomeMusica: "Beomi-Good Night", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/oynyFdUi3vI", NomeArtista: ["JI JIN SEOK"],NomeMusica: "Our Dawn", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/iyiX0cs5swM", NomeArtista: ["BAEKHYUN"],NomeMusica: "Is it me?", imagem: "assets/icon/logo.png"},
+      {url: "https://youtu.be/A6YFRMX8kXo", NomeArtista: ["Onestar"],NomeMusica: "Love Your Everything", imagem: "assets/icon/logo.png"},
     ],data : "31/08"}
     );
    
