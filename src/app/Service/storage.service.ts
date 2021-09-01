@@ -4,6 +4,7 @@ import { Storage } from '@ionic/storage-angular';
 export interface CardsRadar{
   imagem?: String,
   url: String,
+  urlreview?: String,
   NomeMusica: String,
   NomeArtista: String[],
   Descricao?: String

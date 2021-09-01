@@ -30,7 +30,12 @@
 //   --size:100px;
 // }
 
-ion-list-header{
+h1{
+  
   text-align: center;
   font-size: 40px;
+}
+
+ion-button, h1{
+  margin: 10px auto;
 }

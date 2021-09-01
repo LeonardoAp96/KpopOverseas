@@ -1,0 +1,96 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+
+      <ion-title> KpopOverseas </ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-button size="small" [routerLink]="['../home']">
+      <ion-icon name="caret-back-outline"></ion-icon>
+      <p>Voltar</p>
+  </ion-button>
+
+  <h1>KpopOverseas Radar</h1>
+
+
+  <p class="ion-padding-start ion-padding-end">
+    <ion-button (click)="scrollToBottom()" expand="block" fill="outline">
+      Ir para Baixo
+    </ion-button>
+  </p>
+
+  <ion-radio-group radio-group [(ngModel)]="Weeks" value="1" (ionChange)="SelectWeeks(Weeks)">
+    <ion-row>
+      <ion-col size="2">
+        <ion-label>Semana 1 </ion-label>
+        <ion-radio value="1" checked></ion-radio>
+      </ion-col>
+      <ion-col size="2">
+        <ion-label>Semana 2 </ion-label>
+        <ion-radio value="2"></ion-radio>
+      </ion-col>
+      <ion-col size="2">
+        <ion-label>Semana 3 </ion-label>
+        <ion-radio value="3"></ion-radio>
+      </ion-col>
+      <ion-col size="2">
+        <ion-label>Semana 4 </ion-label>
+        <ion-radio value="4"></ion-radio>
+      </ion-col>
+      <ion-col size="2">
+        <ion-label>Semana 5 </ion-label>
+        <ion-radio value="5"></ion-radio>
+      </ion-col>
+    </ion-row>
+  </ion-radio-group>
+
+
+
+  <ion-list>
+    <ion-list-header lines="full">
+      <ion-label>Semana {{Weeks}} - {{nameMonth}}</ion-label>
+    </ion-list-header>
+    <ion-list *ngFor="let card of listCardsRadar.dia">
+      <ion-item>{{card.data}}</ion-item>
+      <ion-item *ngFor="let musics of card.musicas" color="light">
+        <ion-grid>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="2">
+              <ion-thumbnail>
+                <ion-img [src]="ConvertImg(musics.url)" wid></ion-img>
+              </ion-thumbnail>
+            </ion-col>
+            <ion-col class="ion-align-self-center">
+              <ion-label>{{musics.NomeArtista}}</ion-label>
+              <ion-label>{{musics.NomeMusica}}</ion-label>
+              <p>{{musics.Descricao}}</p>
+            </ion-col>
+            <ion-col>
+              <a [href]="musics.urlreview" target="_blank" *ngIf="musics.urlreview" >
+                <ion-button expand="full" shape="round">Review</ion-button>
+              </a>
+              
+            </ion-col>
+          <ion-col>
+              <a [href]="musics.url" target="_blank">
+                <ion-button expand="full" shape="round">Assistir</ion-button>
+              </a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+    </ion-list>
+  </ion-list>
+
+  <p class="ion-padding-start ion-padding-end">
+    <ion-button (click)="scrollToTop()" expand="block" fill="outline">
+      Ir para Cima
+    </ion-button>
+  </p>
+
+</ion-content>

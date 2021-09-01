@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'radar',
+    loadChildren: () => import('./radar/radar.module').then( m => m.RadarPageModule)
+  },
 ];
 
 @NgModule({

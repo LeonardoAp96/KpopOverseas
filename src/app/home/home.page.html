@@ -8,76 +8,49 @@
 
 <ion-content [fullscreen]="true">
 
-
-  <h2>KpopOverseas Radar</h2>
-  <p class="ion-padding-start ion-padding-end">
-    <ion-button (click)="scrollToBottom()" expand="block" fill="outline">
-      Ir para Baixo
-    </ion-button>
-  </p>
-
-  <ion-radio-group radio-group [(ngModel)]="Weeks" value="1" (ionChange)="SelectWeeks(Weeks)">
+  <ion-grid>
     <ion-row>
-      <ion-col size="2">
-        <ion-label>Semana 1 </ion-label>
-        <ion-radio value="1" checked></ion-radio>
-      </ion-col>
-      <ion-col size="2">
-        <ion-label>Semana 2 </ion-label>
-        <ion-radio value="2"></ion-radio>
-      </ion-col>
-      <ion-col size="2">
-        <ion-label>Semana 3 </ion-label>
-        <ion-radio value="3"></ion-radio>
-      </ion-col>
-      <ion-col size="2">
-        <ion-label>Semana 4 </ion-label>
-        <ion-radio value="4"></ion-radio>
-      </ion-col>
-      <ion-col size="2">
-        <ion-label>Semana 5 </ion-label>
-        <ion-radio value="5"></ion-radio>
-      </ion-col>
+      <ion-img src="assets/icon/logo.png" style="width: 200px; margin: auto;">
+      </ion-img>
     </ion-row>
-  </ion-radio-group>
+    
+    <ion-row>
+      <h1>KpopOverseas</h1>
+    </ion-row>
 
+    <ion-row>
+      <ion-button [routerLink]="['../radar']">
+        <ion-col>
+          <h4>Radares</h4>
+        </ion-col>
+        <ion-col>
+          <ion-icon class="setinha" size="large" name="caret-forward-outline"></ion-icon>
+        </ion-col>
+      </ion-button>
+    </ion-row>
 
+    <ion-row>
+      <ion-button href="https://www.instagram.com/kpopoverseas/" target="_blank">
+        <ion-col>
+          <h4>Instagram</h4>
+        </ion-col>
+        <ion-col>
+          <ion-icon class="setinha" size="large" name="caret-forward-outline"></ion-icon>
+        </ion-col>
+      </ion-button>
+    </ion-row>
 
-  <ion-list>
-    <ion-list-header lines="full">
-      <ion-label>Semana {{Weeks}} - {{nameMonth}}</ion-label>
-    </ion-list-header>
-    <ion-list *ngFor="let card of listCardsRadar.dia">
-      <ion-item>{{card.data}}</ion-item>
-      <ion-item *ngFor="let musics of card.musicas" color="light">
-        <ion-grid>
-          <ion-row class="ion-align-items-center">
-            <ion-col size="2">
-              <ion-thumbnail>
-                <ion-img [src]="ConvertImg(musics.url)" wid></ion-img>
-              </ion-thumbnail>
-            </ion-col>
-            <ion-col class="ion-align-self-center">
-              <ion-label>{{musics.NomeArtista}}</ion-label>
-              <ion-label>{{musics.NomeMusica}}</ion-label>
-              <p>{{musics.Descricao}}</p>
-            </ion-col>
-            <ion-col>
-              <a [href]="musics.url" target="_blank">
-                <ion-button expand="full" shape="round">Assistir</ion-button>
-              </a>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
+    <ion-row>
+      <ion-button href="https://www.youtube.com/channel/UC6yGwGKGVvLmWqa1HIYPa9Q" target="_blank">
+        <ion-col>
+          <h4>Youtube</h4>
+        </ion-col>
+        <ion-col>
+          <ion-icon class="setinha" size="large" name="caret-forward-outline"></ion-icon>
+        </ion-col>
+      </ion-button>
+    </ion-row>
 
-    </ion-list>
-  </ion-list>
-
-  <p class="ion-padding-start ion-padding-end">
-    <ion-button (click)="scrollToTop()" expand="block" fill="outline">
-      Ir para Cima
-    </ion-button>
-  </p>
+  </ion-grid>
 
 </ion-content>
