@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content id="container" [fullscreen]="true">
 
   <ion-button size="small" [routerLink]="['../home']">
       <ion-icon name="caret-back-outline"></ion-icon>
@@ -48,8 +48,6 @@
     </ion-row>
   </ion-radio-group>
 
-
-
   <ion-list>
     <ion-list-header lines="full">
       <ion-label>Semana {{Weeks}} - {{nameMonth}}</ion-label>
@@ -67,7 +65,8 @@
             <ion-col class="ion-align-self-center">
               <ion-label>{{musics.NomeArtista}}</ion-label>
               <ion-label>{{musics.NomeMusica}}</ion-label>
-              <p>{{musics.Descricao}}</p>
+
+              <span>{{musics.Descricao}}</span>
             </ion-col>
             <ion-col>
               <a [href]="musics.urlreview" target="_blank" *ngIf="musics.urlreview" >

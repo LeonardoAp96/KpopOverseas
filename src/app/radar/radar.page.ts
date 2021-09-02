@@ -100,7 +100,7 @@ export class RadarPage{
       var week: DayRadar[] = [];
   
       week.push({musicas: [
-        {url: "https://youtu.be/NjRSajtkaWs", NomeArtista: ["Rocoberry"],NomeMusica: "What is love?", imagem: "assets/icon/logo.png"},
+        {url: "https://youtu.be/NjRSajtkaWs", NomeArtista: ["Rocoberry"],NomeMusica: "What is love?", imagem: ""},
         {url: "https://youtu.be/Ug2fBzYmewU", NomeArtista: ["YoonDo"],NomeMusica: "Don’t say goodbye", imagem: "assets/icon/logo.png"}
       ],
       data : "01/08"}
