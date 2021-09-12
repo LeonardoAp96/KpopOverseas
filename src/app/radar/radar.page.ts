@@ -461,5 +461,289 @@ export class RadarPage{
      
       return week;
     }
+
+    
+    public createMonthSeptember(number: Boolean){
+  
+      let num : DayRadar[] = this.createSeptemberWeek1();
+      this.kpopoverseas[7].weeks[0].dia = num;
+  
+      if(!number){
+        num = this.createAugustWeek2();
+        this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"2"});
+        
+        num = this.createAugustWeek3();
+        this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"3"});
+  
+        num = this.createAugustWeek4();
+        this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"4"});
+  
+        num = this.createAugustWeek5();
+        this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"5"});
+      }
+    }
+
+    public createSeptemberWeek1(){
+      var week: DayRadar[] = [];
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/BjmmvBMXbSU", NomeArtista: ["Fromis_9"],NomeMusica: "Talk & Talk", imagem: ""},
+        {url: "https://youtu.be/TbY5JewATYA", NomeArtista: ["Yeo Eun"],NomeMusica: "At least once", imagem: ""},
+        {url: "https://youtu.be/gCu7VUL47wU", NomeArtista: ["Nam Saera"],NomeMusica: "To Yesterday", imagem: ""},
+        {url: "https://youtu.be/I3XA-t57Z6c", NomeArtista: ["Roa"],NomeMusica: "Summer Night", imagem: ""},
+        {url: "https://youtu.be/a4zIWdhVJ8g", NomeArtista: ["Azer-Blossom"],NomeMusica: "Focus on me", imagem: ""},
+
+        
+        {url: "https://youtu.be/1mvQF-ucSiA", NomeArtista: ["Lee Eun Sang"],NomeMusica: "Lemonade", imagem: ""},
+        {url: "https://youtu.be/2aHNwLx5Es8", NomeArtista: ["homezone"],NomeMusica: "Swin", imagem: ""},
+        {url: "https://youtu.be/9Jo3ApHkweM", NomeArtista: ["Kyuhyun"],NomeMusica: "On A Starry Night", imagem: ""},
+        {url: "https://youtu.be/K-tvQ6l-DwE", NomeArtista: ["Dokdo Reed Guardians"],NomeMusica: "dig it? Dokdo", imagem: ""},
+      ],
+      data : "01/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/JHiY3-mWPX0", NomeArtista: ["Young", "amin"], NomeMusica: "Drive ", imagem: ""},
+        
+        {url: "https://youtu.be/gZoWv5Vw42k", NomeArtista: ["A.C.E"],NomeMusica: "Changer", imagem: ""},
+        {url: "https://youtu.be/NkAM3CORdzE", NomeArtista: ["W.A.O"],NomeMusica: "OMW (On My Way)", imagem: ""},
+        {url: "https://youtu.be/HAKWiomg8Ac", NomeArtista: ["W.A.O"],NomeMusica: "Dizzy", imagem: ""},
+        {url: "https://youtu.be/o9Qq-rw-VmY", NomeArtista: ["Heo Young Saeng"],NomeMusica: "MI CASA SU CASA", imagem: ""},
+        {url: "https://youtu.be/8FtD9nybAlo", NomeArtista: ["ONEUS"],NomeMusica: "ONEUS THEATRE : Life is Beautiful", imagem: ""},
+        //{url: "https://youtu.be/76Y8_PRj600", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],
+      data : "02/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/nhtC6-JDGqs", NomeArtista: ["LOONA"],NomeMusica: "Not Friends", imagem: "", urlreview:"https://www.instagram.com/tv/CTXYrr-pLUK"},
+        {url: "https://youtu.be/fDB4CkyrR4U", NomeArtista: ["LeeHi", "B.I"],NomeMusica: "Savior", imagem: ""},
+        {url: "https://youtu.be/1eedtH-wx48", NomeArtista: ["Yuju(Gfriend)"],NomeMusica: "Stay", imagem: ""},
+        {url: "https://youtu.be/aSIjz8k9l0A", NomeArtista: ["Wavycake", "hartts", "Ovus"],NomeMusica: "Way", imagem: ""},
+        {url: "https://youtu.be/yb91sP3duzE", NomeArtista: ["Yeonju Kang"],NomeMusica: "Ocean", imagem: ""},
+        
+        {url: "https://youtu.be/2Wg2BC6Oofg", NomeArtista: ["Common Ground"],NomeMusica: "When the time goes by", imagem: ""},
+        
+      ],data : "03/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/KesDoCR6JAo", NomeArtista: ["Park Hyunho"],NomeMusica: "Money Money Money", imagem: ""},
+        {url: "https://youtu.be/pTGYtEYsAg4", NomeArtista: ["dontworryanu"],NomeMusica: "Everything", imagem: ""},
+        {url: "https://youtu.be/6QAAfa1z9p0", NomeArtista: ["Taewoo"],NomeMusica: "hitmeup", imagem: ""},
+        ],data : "04/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/ZLsmVhFem0w", NomeArtista: ["Hong JuHyun"],NomeMusica: "Flower", imagem: ""},
+        //{url: "https://youtu.be/VDEmn2mjxE4", NomeArtista: [""],NomeMusica: "", imagem: ""},
+       ],data : "05/09"}
+      );
+  
+      return week;
+    }
+
+    public createSeptemberWeek2(){
+      var week: DayRadar[] = [];
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/Xmxcnf2v_gs", NomeArtista: ["STAYC"],NomeMusica: "Stereotype", imagem: "", urlreview:"https://www.instagram.com/p/CTf6SMJMU9i"},
+        {url: "https://youtu.be/0woyDsYzuDI", NomeArtista: ["Yooryeong","DJ Tiz"],NomeMusica: "Sunny Day", imagem: ""},
+        {url: "https://youtu.be/9oLhyXsRZ7E", NomeArtista: ["Sujin", "Ryu Sera"],NomeMusica: "signs to break up", imagem: ""},
+        //{url: "https://youtu.be/BRNbuqjmw1Y", NomeArtista: ["FX"],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/vjxk5mQvI08", NomeArtista: ["General SSO"],NomeMusica: "초능력 ESP", imagem: "", Descricao:"Gosto muito da artista"},
+
+        {url: "https://youtu.be/VRlZa7w8S3Y", NomeArtista: ["Golden Child"],NomeMusica: "Singing In The Rain", imagem: ""},
+        {url: "https://youtu.be/tLcynwlNh38", NomeArtista: ["Young K"],NomeMusica: "Guard You", imagem: ""},
+        {url: "https://youtu.be/F8NMIuawGFY", NomeArtista: ["OmegaX"],NomeMusica: "What's goin' on", imagem: ""},
+        {url: "https://youtu.be/GumWG_Y6fsM", NomeArtista: ["Jung Dong Ha"],NomeMusica: "What I Want To Say", imagem: ""},
+        {url: "https://youtu.be/Q7xqAafv5NU", NomeArtista: ["DAMYE"],NomeMusica: "snap snap snap", imagem: ""},
+      ],
+      data : "06/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/jyHi7ADzJB8", NomeArtista: ["Baek A Yeon"],NomeMusica: "0%", imagem: ""},
+        {url: "https://youtu.be/4KVhDkiB9jQ", NomeArtista: ["Solar(Mamamoo)"],NomeMusica: "Always, be with you", imagem: ""},
+        {url: "https://youtu.be/VERNr77UQJ8", NomeArtista: ["Sulgi"],NomeMusica: "The Last Travel", imagem: ""},
+        {url: "https://youtu.be/r4EaWrIJ9OA", NomeArtista: ["21univ."],NomeMusica: "Totally My Style", imagem: ""},
+        
+        {url: "https://youtu.be/SdVUGcHO_zc", NomeArtista: ["Haeun"],NomeMusica: "I Love You", imagem: ""},
+        {url: "https://youtu.be/o0-IKr7UHbI", NomeArtista: ["Lee Mingyu"],NomeMusica: "On My Way Home", imagem: ""},
+        {url: "https://youtu.be/xSXslki5xIY", NomeArtista: ["Sungmin"],NomeMusica: "Goodnight, Summer", imagem: ""},
+      ],
+      data : "07/09"}
+      );
+  
+      week.push({musicas: [
+        //{url: "https://youtu.be/nMeGsnghfII", NomeArtista: [""],NomeMusica: "Flip It (Galaxy CM)", imagem: ""},
+        {url: "https://youtu.be/9o4jA2IimPY", NomeArtista: ["RedChair"],NomeMusica: "Letter to my ex", imagem: ""},
+        {url: "https://youtu.be/6LeWSmcH3jY", NomeArtista: ["Ichillin'"],NomeMusica: "Got'Ya", imagem: "", urlreview:"https://www.instagram.com/p/CTs1ZbGJFFu"},
+        //{url: "https://youtu.be/7b3WJp_nWRo", NomeArtista: ["Hanabi"],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/a3ErfnRuT6Q", NomeArtista: ["Meaningful Stone"],NomeMusica: "Dancing in the rain", imagem: ""},
+        
+        {url: "https://youtu.be/CUvMEdas6Ds", NomeArtista: ["1Kyne"],NomeMusica: "Bop", imagem: ""},
+        {url: "https://youtu.be/dOTe44YwRRk", NomeArtista: ["N.Flying"],NomeMusica: "Chance", imagem: ""},
+        {url: "https://youtu.be/e2vu1l2jHOA", NomeArtista: ["MEGAMAX "],NomeMusica: "Painted÷LOVE:", imagem: ""},        
+      ],data : "08/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/GLlP-CNlY9I", NomeArtista: ["LeeHi", "Yoon Mirae"],NomeMusica: "Red Lipstick", imagem: ""},
+        {url: "https://youtu.be/oxCt4V8HwxU", NomeArtista: ["Luli lee"],NomeMusica: "About Summer", imagem: ""},
+        {url: "https://youtu.be/JgClEHGKdN8", NomeArtista: ["Ha Yea Song"],NomeMusica: "Your regards", imagem: ""},
+        {url: "https://youtu.be/nJLrIbp7-eI", NomeArtista: ["FreezyBone", "UU Milan"],NomeMusica: "FreezyVogue", imagem: ""},
+        {url: "https://youtu.be/I0Vzpoif4Mk", NomeArtista: ["Makers","onDa", "YoonKyung"],NomeMusica: "Gray Night", imagem: ""},
+        {url: "https://youtu.be/0aaeUI1ucfQ", NomeArtista: ["Hyuna", "Dawn"],NomeMusica: "Ping Pong", imagem: ""},
+        
+        {url: "https://youtu.be/S5gF6zMZmSk", NomeArtista: ["Nell"],NomeMusica: "U-hee", imagem: ""},
+        {url: "https://youtu.be/UWXWKKzQMsA", NomeArtista: ["Luminous"],NomeMusica: "Run", imagem: ""},
+        {url: "https://youtu.be/HPS3OaQpSu4", NomeArtista: ["Jeon WooSung"],NomeMusica: "I'm afraid I'll stop liking it.", imagem: ""},
+        ],data : "09/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/awkkyBH2zEo", NomeArtista: ["Lisa"],NomeMusica: "Lalisa", imagem: "", urlreview:"https://www.instagram.com/p/CTqBFDPJVwN"},
+        {url: "https://youtu.be/gjyEcSim4js", NomeArtista: ["BiBi"],NomeMusica: "PADO", imagem: ""},
+        {url: "https://youtu.be/WFJlFOlQmxU", NomeArtista: ["Yerin Baek"],NomeMusica: "Why Me?", imagem: ""},
+        
+        {url: "https://youtu.be/3GPVjQt34D8", NomeArtista: ["WeAreYoung"],NomeMusica: "For You", imagem: ""},
+        {url: "https://youtu.be/cO-IvuNjaYY", NomeArtista: ["Muddy Red", "oceanfromtheblue", "Deliman"],NomeMusica: "Rollin’", imagem: ""},
+        //{url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+       ],data : "10/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/a1GxiIr6IEU", NomeArtista: ["Veautiful Biew"],NomeMusica: "DUMPED", imagem: ""},
+        //{url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],data : "11/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "https://youtu.be/l81arx3ev0g", NomeArtista: ["Hwang Chi Yeul"],NomeMusica: "Too late", imagem: ""},
+        //{url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],data : "12/09"}
+      );
+  
+      return week;
+    }
+
+    public createSeptemberWeek3(){
+      var week: DayRadar[] = [];
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],
+      data : "13/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],
+      data : "14/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        
+      ],data : "15/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        ],data : "16/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+       ],data : "17/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],data : "18/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],data : "19/09"}
+      );
+  
+      return week;
+    }
+
+    public createSeptemberWeek4(){
+      var week: DayRadar[] = [];
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],
+      data : "20/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],
+      data : "21/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        
+      ],data : "22/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        ],data : "23/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+       ],data : "24/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],data : "25/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],data : "26/09"}
+      );
+  
+      return week;
+    }
+
+    public createSeptemberWeek5(){
+      var week: DayRadar[] = [];
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],
+      data : "27/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+      ],
+      data : "28/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        
+      ],data : "29/09"}
+      );
+  
+      week.push({musicas: [
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        ],data : "30/09"}
+      );
+  
+      return week;
+    }
+
   }
   
