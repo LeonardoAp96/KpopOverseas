@@ -17,13 +17,31 @@
   <h1>KpopOverseas Radar</h1>
 
 
-  <!-- <p class="ion-padding-start ion-padding-end">
+  <p class="ion-padding-start ion-padding-end">
     <ion-button (click)="scrollToBottom()" expand="block" fill="outline">
       Ir para Baixo
     </ion-button>
-  </p> -->
+  </p>
 
-  <ion-radio-group radio-group [(ngModel)]="Weeks" value="1" (ionChange)="SelectWeeks(Weeks)">
+  <hr>
+  <section>
+    <header>Mês / Mounth</header>
+    <ion-button (click)="SelectMonth(7)">August</ion-button>
+    <ion-button color="secondary" (click)="SelectMonth(8)">September</ion-button>
+  </section>
+  <hr>
+
+  <section>
+    <ion-button size="small" (click)="SelectWeeks(1)">Semana 1</ion-button>
+    <ion-button size="small" color="secondary" (click)="SelectWeeks(2)">Semana 2</ion-button>
+    <ion-button size="small" (click)="SelectWeeks(3)">Semana 3</ion-button>
+    <ion-button size="small" color="secondary" (click)="SelectWeeks(4)">Semana 4</ion-button>
+    <ion-button size="small" (click)="SelectWeeks(5)">Semana 5</ion-button>
+  </section>
+  <hr>
+  
+<!-- 
+  <ion-radio-group radio-group [(ngModel)]="WeekSelected" value="1" (ionChange)="SelectWeeks(WeekSelected)">
     <ion-row>
       <ion-col size="2">
         <ion-label>Semana 1 </ion-label>
@@ -46,11 +64,11 @@
         <ion-radio value="5"></ion-radio>
       </ion-col>
     </ion-row>
-  </ion-radio-group>
+  </ion-radio-group> -->
 
   <ion-list>
     <ion-list-header lines="full">
-      <ion-label>Semana {{Weeks}} - {{nameMonth}}</ion-label>
+      <ion-label>Semana {{WeekSelected}} - {{nameMonth}}</ion-label>
     </ion-list-header>
     <ion-list *ngFor="let card of listCardsRadar.dia">
       <ion-item>{{card.data}}</ion-item>
@@ -86,10 +104,10 @@
     </ion-list>
   </ion-list>
 
-  <!-- <p class="ion-padding-start ion-padding-end">
+  <p class="ion-padding-start ion-padding-end">
     <ion-button (click)="scrollToTop()" expand="block" fill="outline">
       Ir para Cima
     </ion-button>
-  </p> -->
+  </p>
 
 </ion-content>

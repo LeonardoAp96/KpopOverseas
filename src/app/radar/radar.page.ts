@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class RadarPage{
   
-    public Weeks: number;
+    public WeekSelected: number;
+    public MonthSelected: number;
     public nameMonth: String;
     public kpopoverseas : MonthRadar[] = [];
     
@@ -17,24 +18,46 @@ export class RadarPage{
     constructor(private storage: StorageService){
       
       this.PreencherMonths(12);
-      this.Weeks = 1;
+      this.WeekSelected = 1;
+      this.MonthSelected = 7;
       this.createMonthAugust(true);
+      this.createMonthSeptember();
       
-      this.listCardsRadar = this.kpopoverseas[7].weeks[this.Weeks-1];
-      this.nameMonth = this.kpopoverseas[7].nameMonth;
+      this.listCardsRadar = this.kpopoverseas[this.MonthSelected].weeks[0];
+      this.nameMonth = this.kpopoverseas[this.MonthSelected].nameMonth;
     }
   
     ionViewDidEnter(){
       this.createMonthAugust(false);
     }
+
     public ConvertImg(url: String){
       let str = url.split('/');
   
-      return "https://i.ytimg.com/vi/" + str[str.length-1] + "/maxresdefault.jpg";
+      try {
+        
+        return "https://i.ytimg.com/vi/" + str[str.length-1] + "/maxresdefault.jpg";
+      } catch (error) {
+        return "";
+      }
+
+    }
+
+    public refreshList(){
+
+      this.listCardsRadar = this.kpopoverseas[this.MonthSelected].weeks[this.WeekSelected-1];
+      this.nameMonth = this.kpopoverseas[this.MonthSelected].nameMonth;
+
     }
   
     public SelectWeeks(week: number){
-      this.listCardsRadar = this.kpopoverseas[7].weeks[week-1];
+      this.WeekSelected = week;
+      this.refreshList();
+    }
+
+    public SelectMonth(month: number){
+      this.MonthSelected = month;
+      this.refreshList();
     }
   
     public getContent() {
@@ -463,24 +486,24 @@ export class RadarPage{
     }
 
     
-    public createMonthSeptember(number: Boolean){
+    public createMonthSeptember(){
   
       let num : DayRadar[] = this.createSeptemberWeek1();
-      this.kpopoverseas[7].weeks[0].dia = num;
+      this.kpopoverseas[8].weeks[0].dia = num;
+      this.kpopoverseas[8].weeks[0].weekNumber = "1";
   
-      if(!number){
-        num = this.createAugustWeek2();
-        this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"2"});
+        num = this.createSeptemberWeek2();
+        this.kpopoverseas[8].weeks.push({dia:num, weekNumber:"2"});
         
-        num = this.createAugustWeek3();
-        this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"3"});
+        num = this.createSeptemberWeek3();
+        this.kpopoverseas[8].weeks.push({dia:num, weekNumber:"3"});
   
-        num = this.createAugustWeek4();
-        this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"4"});
+        num = this.createSeptemberWeek4();
+        this.kpopoverseas[8].weeks.push({dia:num, weekNumber:"4"});
   
-        num = this.createAugustWeek5();
-        this.kpopoverseas[7].weeks.push({dia:num, weekNumber:"5"});
-      }
+        num = this.createSeptemberWeek5();
+        this.kpopoverseas[8].weeks.push({dia:num, weekNumber:"5"});
+
     }
 
     public createSeptemberWeek1(){
