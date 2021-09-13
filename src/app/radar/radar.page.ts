@@ -32,15 +32,14 @@ export class RadarPage{
     }
 
     public ConvertImg(url: String){
-      let str = url.split('/');
-  
-      try {
-        
-        return "https://i.ytimg.com/vi/" + str[str.length-1] + "/maxresdefault.jpg";
-      } catch (error) {
-        return "";
-      }
+      if(url == "")
+        return "assets/icon/logo.png";
 
+      const str = url.split('/');
+      //const r = new URL("https://pt.stackoverflow.com/questions/123868/verificar-se-url-existe");
+        
+      return "https://i.ytimg.com/vi/" + str[str.length-1] + "/maxresdefault.jpg";      
+      //return "https://i.ytimg.com/vi/" + str[str.length-1] + "/hqdefault.jpg";
     }
 
     public refreshList(){
@@ -655,7 +654,16 @@ export class RadarPage{
       var week: DayRadar[] = [];
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/JKfGfLJhTDU", NomeArtista: ["Sound Surgeon", "Dori"],NomeMusica: "If You, If I", imagem: ""},
+        {url: "https://youtu.be/mNSk7W6bod8", NomeArtista: ["Luci Gang"],NomeMusica: "Nagageodeun", imagem: ""},
+        {url: "https://youtu.be/wnlh9yoxBek", NomeArtista: ["Zia"],NomeMusica: "Please", imagem: ""},
+
+        {url: "https://youtu.be/_TgdvzrWv0g", NomeArtista: ["Ateez"],NomeMusica: "Deja Vu", imagem: ""},
+        {url: "https://youtu.be/b2Aj9fSUCQk", NomeArtista: ["Young K"],NomeMusica: "Come as you are", imagem: ""},
+        {url: "https://youtu.be/o18DRTNpS4Q", NomeArtista: ["Baehyuni"],NomeMusica: "Land adn Sea", imagem: ""},
+        {url: "https://youtu.be/rOfDyaRWClQ", NomeArtista: ["Yun DDanDDan"],NomeMusica: "Will smile", imagem: ""},
+        {url: "https://youtu.be/IjSdJbJzXLI", NomeArtista: ["Lee Mingyu"],NomeMusica: "On My Way Home", imagem: ""},
+        //{url: "https://youtu.be/SgF9uoaIPwE", NomeArtista: [""],NomeMusica: "", imagem: ""},
       ],
       data : "13/09"}
       );
