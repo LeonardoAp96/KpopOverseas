@@ -18,12 +18,12 @@ export class RadarPage{
     constructor(private storage: StorageService){
       
       this.PreencherMonths(12);
-      this.WeekSelected = 1;
-      this.MonthSelected = 7;
+      this.WeekSelected = 4;
+      this.MonthSelected = 8;
       this.createMonthAugust(true);
       this.createMonthSeptember();
       
-      this.listCardsRadar = this.kpopoverseas[this.MonthSelected].weeks[0];
+      this.listCardsRadar = this.kpopoverseas[this.MonthSelected].weeks[this.WeekSelected -1 ];
       this.nameMonth = this.kpopoverseas[this.MonthSelected].nameMonth;
     }
   
@@ -36,17 +36,33 @@ export class RadarPage{
         return "assets/icon/logo.png";
 
       const str = url.split('/');
-      //const r = new URL("https://pt.stackoverflow.com/questions/123868/verificar-se-url-existe");
-        
-      return "https://i.ytimg.com/vi/" + str[str.length-1] + "/maxresdefault.jpg";      
-      //return "https://i.ytimg.com/vi/" + str[str.length-1] + "/hqdefault.jpg";
+      const t = "https://i.ytimg.com/vi/" + str[str.length-1] + "/hqdefault.jpg" 
+      return t;      
     }
 
     public refreshList(){
-
       this.listCardsRadar = this.kpopoverseas[this.MonthSelected].weeks[this.WeekSelected-1];
       this.nameMonth = this.kpopoverseas[this.MonthSelected].nameMonth;
+    }
 
+    public weekDay(dat:String){
+debugger
+      let dia = dat.split('/');
+      let e = new Date(2021, Number.parseInt(dia[1])-1, Number.parseInt(dia[0]) );
+      let diaSemana = "";
+
+      switch(e.getDay()){
+        case 0: {diaSemana="Domingo";break;}
+        case 1: {diaSemana="Segunda";break;}
+        case 2: {diaSemana="Terça";break;}
+        case 3: {diaSemana="Quarta";break;}
+        case 4: {diaSemana="Quinta";break;}
+        case 5: {diaSemana="Sexta";break;}
+        case 6: {diaSemana="Sábado";break;}
+        default: {diaSemana="nn";break;}
+      }
+
+      return diaSemana;
     }
   
     public SelectWeeks(week: number){
@@ -669,29 +685,56 @@ export class RadarPage{
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/ww9hZfgC2d8", NomeArtista: ["LeeHi", "Wonstein"],NomeMusica: "H.S.K.T.", imagem: "boa vibe"},
+
+        {url: "https://youtu.be/q03Y8mG4Asg", NomeArtista: ["Wonho"],NomeMusica: "Blue", imagem: ""},
+        {url: "https://youtu.be/32jie-a4lF8", NomeArtista: ["Dwigon"],NomeMusica: "With you", imagem: ""},
+        {url: "https://youtu.be/WHkQtNBCRQo", NomeArtista: ["Lee Mujin"],NomeMusica: "Fall in Fall", imagem: ""},
+        {url: "https://youtu.be/_6kZcZvFmHc", NomeArtista: ["Han Yo Han","Changmo"],NomeMusica: "This Is Me", imagem: ""},
       ],
       data : "14/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/boAKqlSYAbQ", NomeArtista: ["Chuu(Loona)","Kim yohan"],NomeMusica: "World is one 2021", imagem: ""},
+        {url: "https://youtu.be/ajxfoVrXdKw", NomeArtista: ["Mamamoo"],NomeMusica: "mumumumuch", imagem: ""},
+        {url: "https://youtu.be/KRzB-Wib7VI", NomeArtista: ["Kim Yuna", "Wonstein"],NomeMusica: "Song For You", imagem: ""},
+        {url: "https://youtu.be/TUgNpB50VAw", NomeArtista: ["Soppy"],NomeMusica: "A Long night", imagem: ""},
+        {url: "https://youtu.be/Tpz99Tyt1B0", NomeArtista: ["HYNN"],NomeMusica: "Running in the sky", imagem: ""},
+        {url: "https://youtu.be/FlZIdVjSkeE", NomeArtista: ["Jamie", "Jmin"],NomeMusica: "No Numbers", imagem: ""},
         
+        {url: "https://youtu.be/Zd31yLSKJ2c", NomeArtista: ["Joosiq"],NomeMusica: "Think About You", imagem: ""},
+        //{url: "https://youtu.be/NFOAl-Y0Frw", NomeArtista: ["Junhee Lee"],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/1oOZZz1ChFg", NomeArtista: ["Yang Da Il", "Bumkey"],NomeMusica: "Home", imagem: ""},
+        {url: "https://youtu.be/SczDFXSXX3g", NomeArtista: ["off the menu"],NomeMusica: "Lovers in Seoul", imagem: ""},
+        {url: "https://youtu.be/mbESmq1_vRA", NomeArtista: ["Jeon Sang Keun"],NomeMusica: "Natural Sorrow", imagem: ""},        
       ],data : "15/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/mzgV1GE1QUY", NomeArtista: ["Celine"],NomeMusica: "Lemon Balm", imagem: ""},
+        {url: "https://youtu.be/P3YURx8awqQ", NomeArtista: ["Seori", "eaj"],NomeMusica: "Dive with you", imagem: ""},
+        
+        {url: "https://youtu.be/wZsJjI8YqRI", NomeArtista: ["Goopy"],NomeMusica: "Teenage", imagem: ""},
+        {url: "https://youtu.be/tJSOuwt9EAQ", NomeArtista: ["KIM WOOJIN"],NomeMusica: "My growing pains", imagem: ""},
         ],data : "16/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/s9djn7f7qy8", NomeArtista: ["Ripley"],NomeMusica: "Magnet", imagem: ""},
+        {url: "https://youtu.be/88PbEgxkbbo", NomeArtista: ["Baek A"],NomeMusica: "Spaceship", imagem: ""},
+        
+        {url: "https://youtu.be/1oYWnbTSang", NomeArtista: ["NCT 127"],NomeMusica: "Sticker", imagem: ""},
+        {url: "https://youtu.be/aRTUUJkIndA", NomeArtista: ["BAE173"],NomeMusica: "Melody", imagem: ""},
+        {url: "https://youtu.be/v0mnJIo1Njc", NomeArtista: ["HBK Lee"],NomeMusica: "I Can't Stop Loving You", imagem: ""},
+        {url: "https://youtu.be/HeiJ-jCInPA", NomeArtista: ["Brown Tigger", "Layone","Basick"],NomeMusica: "Open up the shutters", imagem: ""},
        ],data : "17/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/XrrlhaiewfI", NomeArtista: ["NUOL"," Sound Kim","Boi B"],NomeMusica: "With me", imagem: ""},
+        {url: "https://youtu.be/8Z-Gd7mTmgk", NomeArtista: ["Kim Suyoung"],NomeMusica: "Suddenly I Thought", imagem: ""},
+
       ],data : "18/09"}
       );
   
@@ -707,7 +750,8 @@ export class RadarPage{
       var week: DayRadar[] = [];
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/_TgdvzrWv0g", NomeArtista: ["Ateez"],NomeMusica: "Deja Vu", imagem: ""},
+        {url: "https://youtu.be/b2Aj9fSUCQk", NomeArtista: ["Young K"],NomeMusica: "Come as you are", imagem: ""},
       ],
       data : "20/09"}
       );

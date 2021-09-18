@@ -71,7 +71,7 @@
       <ion-label>Semana {{WeekSelected}} - {{nameMonth}}</ion-label>
     </ion-list-header>
     <ion-list *ngFor="let card of listCardsRadar.dia">
-      <ion-item>{{card.data}}</ion-item>
+      <ion-item>{{card.data}} - {{weekDay(card.data)}}</ion-item>
       <ion-item *ngFor="let musics of card.musicas" color="light">
         <ion-grid>
           <ion-row class="ion-align-items-center">
