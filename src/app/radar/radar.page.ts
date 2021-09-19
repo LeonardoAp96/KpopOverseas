@@ -18,7 +18,7 @@ export class RadarPage{
     constructor(private storage: StorageService){
       
       this.PreencherMonths(12);
-      this.WeekSelected = 4;
+      this.WeekSelected = 3;
       this.MonthSelected = 8;
       this.createMonthAugust(true);
       this.createMonthSeptember();
@@ -46,9 +46,9 @@ export class RadarPage{
     }
 
     public weekDay(dat:String){
-debugger
+
       let dia = dat.split('/');
-      let e = new Date(2021, Number.parseInt(dia[1])-1, Number.parseInt(dia[0]) );
+      let e = new Date(2021, Number.parseInt(dia[1])-1, Number.parseInt(dia[0]));
       let diaSemana = "";
 
       switch(e.getDay()){
@@ -642,7 +642,7 @@ debugger
   
       week.push({musicas: [
         {url: "https://youtu.be/awkkyBH2zEo", NomeArtista: ["Lisa"],NomeMusica: "Lalisa", imagem: "", urlreview:"https://www.instagram.com/p/CTqBFDPJVwN"},
-        {url: "https://youtu.be/gjyEcSim4js", NomeArtista: ["BiBi"],NomeMusica: "PADO", imagem: ""},
+        {url: "https://youtu.be/gjyEcSim4js", NomeArtista: ["BiBi"],NomeMusica: "PADO", imagem: "", urlreview:"https://www.instagram.com/p/CT8QBKVplw9"},
         {url: "https://youtu.be/WFJlFOlQmxU", NomeArtista: ["Yerin Baek"],NomeMusica: "Why Me?", imagem: ""},
         
         {url: "https://youtu.be/3GPVjQt34D8", NomeArtista: ["WeAreYoung"],NomeMusica: "For You", imagem: ""},
@@ -685,7 +685,7 @@ debugger
       );
   
       week.push({musicas: [
-        {url: "https://youtu.be/ww9hZfgC2d8", NomeArtista: ["LeeHi", "Wonstein"],NomeMusica: "H.S.K.T.", imagem: "boa vibe"},
+        {url: "https://youtu.be/ww9hZfgC2d8", NomeArtista: ["LeeHi", "Wonstein"],NomeMusica: "H.S.K.T.", imagem: "boa vibe", urlreview:"https://www.instagram.com/p/CT-2Ku_JbcS"},
 
         {url: "https://youtu.be/q03Y8mG4Asg", NomeArtista: ["Wonho"],NomeMusica: "Blue", imagem: ""},
         {url: "https://youtu.be/32jie-a4lF8", NomeArtista: ["Dwigon"],NomeMusica: "With you", imagem: ""},
@@ -697,7 +697,7 @@ debugger
   
       week.push({musicas: [
         {url: "https://youtu.be/boAKqlSYAbQ", NomeArtista: ["Chuu(Loona)","Kim yohan"],NomeMusica: "World is one 2021", imagem: ""},
-        {url: "https://youtu.be/ajxfoVrXdKw", NomeArtista: ["Mamamoo"],NomeMusica: "mumumumuch", imagem: ""},
+        {url: "https://youtu.be/ajxfoVrXdKw", NomeArtista: ["Mamamoo"],NomeMusica: "mumumumuch", imagem: "", urlreview:"https://www.instagram.com/p/CT5wnEmFuml"},
         {url: "https://youtu.be/KRzB-Wib7VI", NomeArtista: ["Kim Yuna", "Wonstein"],NomeMusica: "Song For You", imagem: ""},
         {url: "https://youtu.be/TUgNpB50VAw", NomeArtista: ["Soppy"],NomeMusica: "A Long night", imagem: ""},
         {url: "https://youtu.be/Tpz99Tyt1B0", NomeArtista: ["HYNN"],NomeMusica: "Running in the sky", imagem: ""},
@@ -714,7 +714,9 @@ debugger
       week.push({musicas: [
         {url: "https://youtu.be/mzgV1GE1QUY", NomeArtista: ["Celine"],NomeMusica: "Lemon Balm", imagem: ""},
         {url: "https://youtu.be/P3YURx8awqQ", NomeArtista: ["Seori", "eaj"],NomeMusica: "Dive with you", imagem: ""},
-        
+        {url: "https://youtu.be/oiBUk_NjIwU", NomeArtista: ["Pritti-G"],NomeMusica: "Buckle up", imagem: ""},
+
+        {url: "https://youtu.be/BIfjbX6hJBc", NomeArtista: ["Jeonghan"],NomeMusica: "Dream", imagem: "", Descricao:"A levada calma da música é boazin"},
         {url: "https://youtu.be/wZsJjI8YqRI", NomeArtista: ["Goopy"],NomeMusica: "Teenage", imagem: ""},
         {url: "https://youtu.be/tJSOuwt9EAQ", NomeArtista: ["KIM WOOJIN"],NomeMusica: "My growing pains", imagem: ""},
         ],data : "16/09"}
@@ -724,6 +726,7 @@ debugger
         {url: "https://youtu.be/s9djn7f7qy8", NomeArtista: ["Ripley"],NomeMusica: "Magnet", imagem: ""},
         {url: "https://youtu.be/88PbEgxkbbo", NomeArtista: ["Baek A"],NomeMusica: "Spaceship", imagem: ""},
         
+        {url: "https://youtu.be/JtkFsKuhtHA", NomeArtista: ["MVP"],NomeMusica: "I'm a go", imagem: ""},
         {url: "https://youtu.be/1oYWnbTSang", NomeArtista: ["NCT 127"],NomeMusica: "Sticker", imagem: ""},
         {url: "https://youtu.be/aRTUUJkIndA", NomeArtista: ["BAE173"],NomeMusica: "Melody", imagem: ""},
         {url: "https://youtu.be/v0mnJIo1Njc", NomeArtista: ["HBK Lee"],NomeMusica: "I Can't Stop Loving You", imagem: ""},
@@ -739,7 +742,9 @@ debugger
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/dxcgZ__r-SU", NomeArtista: ["I'll be There"],NomeMusica: "Wooks", imagem: ""},
+        {url: "https://youtu.be/eV_lBZsRIO8", NomeArtista: ["DK(December)"],NomeMusica: "On that night", imagem: ""},
+        {url: "https://youtu.be/iFnivCcu8Dw", NomeArtista: ["SOMDEF", "GSoul"],NomeMusica: "It was", imagem: ""},
       ],data : "19/09"}
       );
   
@@ -750,8 +755,7 @@ debugger
       var week: DayRadar[] = [];
   
       week.push({musicas: [
-        {url: "https://youtu.be/_TgdvzrWv0g", NomeArtista: ["Ateez"],NomeMusica: "Deja Vu", imagem: ""},
-        {url: "https://youtu.be/b2Aj9fSUCQk", NomeArtista: ["Young K"],NomeMusica: "Come as you are", imagem: ""},
+        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
       ],
       data : "20/09"}
       );
