@@ -18,7 +18,7 @@ export class RadarPage{
     constructor(private storage: StorageService){
       
       this.PreencherMonths(12);
-      this.WeekSelected = 3;
+      this.WeekSelected = 4;
       this.MonthSelected = 8;
       this.createMonthAugust(true);
       this.createMonthSeptember();
@@ -742,7 +742,7 @@ export class RadarPage{
       );
   
       week.push({musicas: [
-        {url: "https://youtu.be/dxcgZ__r-SU", NomeArtista: ["I'll be There"],NomeMusica: "Wooks", imagem: ""},
+        {url: "https://youtu.be/dxcgZ__r-SU", NomeArtista: ["Wooks"],NomeMusica: "I'll be There", imagem: ""},
         {url: "https://youtu.be/eV_lBZsRIO8", NomeArtista: ["DK(December)"],NomeMusica: "On that night", imagem: ""},
         {url: "https://youtu.be/iFnivCcu8Dw", NomeArtista: ["SOMDEF", "GSoul"],NomeMusica: "It was", imagem: ""},
       ],data : "19/09"}
@@ -755,40 +755,71 @@ export class RadarPage{
       var week: DayRadar[] = [];
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/OQUVw0eI0eo", NomeArtista: ["Woo Yerin"],NomeMusica: "Night Flower", imagem: ""},
+        {url: "https://youtu.be/njAO9cB_yvI", NomeArtista: ["Aster","Neo"],NomeMusica: "ON & ON", imagem: ""},
+        
+        {url: "https://youtu.be/h_jAPjbdILM", NomeArtista: ["Yang Yoseop"],NomeMusica: "Brain", imagem: ""},
+        {url: "https://youtu.be/ZesppXuPLeM", NomeArtista: ["Yukika"],NomeMusica: "loving you", imagem: ""},
       ],
       data : "20/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        //{url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
       ],
       data : "21/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/zeI1RXSK1YY", NomeArtista: ["Joosiq"],NomeMusica: "Think About you", imagem: ""},
+        {url: "https://youtu.be/Fm4hpMcP8jo", NomeArtista: ["Kebee", "Bumkey"],NomeMusica: "Train Bed", imagem: ""},
         
       ],data : "22/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/bDqVnMWxqwY", NomeArtista: ["Beauty Box"],NomeMusica: "Rat A Tat", imagem: ""},
+        {url: "https://youtu.be/6A6eSRx7RuA", NomeArtista: ["WJSN"],NomeMusica: "Let me in", imagem: ""},
+        {url: "https://youtu.be/xbdR_BPsqE8", NomeArtista: ["Awon"],NomeMusica: "Windy Rain", imagem: ""},
+        //{url: "https://youtu.be/wTFXXgGbiKQ", NomeArtista: ["Jo Yuri"],NomeMusica: "", imagem: ""},
+        
+        {url: "https://youtu.be/Hm4pLX6-egI", NomeArtista: ["Seo actor", "Dept", "Sonny Zero","Ashley Alisha"],NomeMusica: "Closer", imagem: ""},
+        {url: "https://youtu.be/pvr5z0ocZJQ", NomeArtista: ["Norazo"],NomeMusica: "Buy now Think later", imagem: ""},
         ],data : "23/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/MjCZfZfucEc", NomeArtista: ["ITZY"],NomeMusica: "Loco", imagem: ""},
+        //{url: "https://youtu.be/mZlsvAgc8KI", NomeArtista: [""],NomeMusica: "Slowly loving you", imagem: ""},
+        {url: "https://youtu.be/WaSDL0dsDsY", NomeArtista: ["Hayan"],NomeMusica: "Hwi Hwi", imagem: ""},
+        {url: "https://youtu.be/e6fwm1hV97I", NomeArtista: ["yourbeagle", "Bigone"],NomeMusica: "How to Love", imagem: ""},
+        {url: "https://youtu.be/maYYrJXKq3Q", NomeArtista: ["Jeon Mido"],NomeMusica: "Butterfly", imagem: ""},
+        {url: "https://youtu.be/4hHIvQEVazU", NomeArtista: ["Kim Sawol"],NomeMusica: "Lonely", imagem: ""},
+
+        
+        {url: "https://youtu.be/6KdsZDzaEv4", NomeArtista: ["Onestar"],NomeMusica: "September 24th", imagem: ""},
+        //{url: "https://youtu.be/uNzHXdhMp_A", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/FSg_AXZXmm0", NomeArtista: ["Born Wild"],NomeMusica: "Uncle", imagem: ""},
+        {url: "https://youtu.be/NApvRGjnLCQ", NomeArtista: ["Kebee"],NomeMusica: "Show", imagem: ""},
+        {url: "https://youtu.be/j3ITqBa_TW4", NomeArtista: ["Mido and Falasol"],NomeMusica: "Someday", imagem: ""},
+        {url: "https://youtu.be/iJo5AI0lYGM", NomeArtista: ["Pretty Brown"],NomeMusica: "Come Like the Wind", imagem: ""},
        ],data : "24/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/mNlryT23RPc", NomeArtista: ["PIXY"],NomeMusica: "Still with me", imagem: ""},
+        //{url: "https://youtu.be/KoUS6onUezE", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        
+        {url: "https://youtu.be/BSQN16Is9qU", NomeArtista: ["Do HanSe"],NomeMusica: "Take Over", imagem: ""},
+        {url: "https://youtu.be/Zu2jAE73IiA", NomeArtista: ["Sikboy", "Skull"],NomeMusica: "Dreads", imagem: ""},
       ],data : "25/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/fk67LiNYWEw", NomeArtista: ["Sojeong"],NomeMusica: "Nothing Between Us", imagem: ""},
+        {url: "https://youtu.be/v0qo0BxzXt8", NomeArtista: ["Parkjiwoo"],NomeMusica: "Already know", imagem: ""},
+        
+        {url: "https://youtu.be/GIRRP-yZoi8", NomeArtista: ["Kim JaeHwan"],NomeMusica: "Be the light", imagem: ""},
       ],data : "26/09"}
       );
   
