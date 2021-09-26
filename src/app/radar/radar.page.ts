@@ -778,7 +778,7 @@ export class RadarPage{
       );
   
       week.push({musicas: [
-        {url: "https://youtu.be/bDqVnMWxqwY", NomeArtista: ["Beauty Box"],NomeMusica: "Rat A Tat", imagem: ""},
+        {url: "https://youtu.be/bDqVnMWxqwY", NomeArtista: ["Beauty Box"],NomeMusica: "Rat A Tat", imagem: "", urlreview:"https://www.instagram.com/p/CULo7R-pzWU"},
         {url: "https://youtu.be/6A6eSRx7RuA", NomeArtista: ["WJSN"],NomeMusica: "Let me in", imagem: ""},
         {url: "https://youtu.be/xbdR_BPsqE8", NomeArtista: ["Awon"],NomeMusica: "Windy Rain", imagem: ""},
         //{url: "https://youtu.be/wTFXXgGbiKQ", NomeArtista: ["Jo Yuri"],NomeMusica: "", imagem: ""},
@@ -789,7 +789,7 @@ export class RadarPage{
       );
   
       week.push({musicas: [
-        {url: "https://youtu.be/MjCZfZfucEc", NomeArtista: ["ITZY"],NomeMusica: "Loco", imagem: ""},
+        {url: "https://youtu.be/MjCZfZfucEc", NomeArtista: ["ITZY"],NomeMusica: "Loco", imagem: "", urlreview:"https://www.instagram.com/p/CUOMZZVJzYa"},
         //{url: "https://youtu.be/mZlsvAgc8KI", NomeArtista: [""],NomeMusica: "Slowly loving you", imagem: ""},
         {url: "https://youtu.be/WaSDL0dsDsY", NomeArtista: ["Hayan"],NomeMusica: "Hwi Hwi", imagem: ""},
         {url: "https://youtu.be/e6fwm1hV97I", NomeArtista: ["yourbeagle", "Bigone"],NomeMusica: "How to Love", imagem: ""},
