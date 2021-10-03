@@ -830,25 +830,65 @@ export class RadarPage{
       var week: DayRadar[] = [];
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/m36_uLadorA", NomeArtista: ["Jang HeeWon"],NomeMusica: "I Wouldn't Have Loved", imagem: ""},
+        {url: "https://youtu.be/8xg7h1OTrsc", NomeArtista: ["Dowoon", "Song Heejin"],NomeMusica: "Out of the Blue", imagem: ""},
+        {url: "https://youtu.be/lNjOnKkQGzU", NomeArtista: ["Choi JongWon"],NomeMusica: "Circle", imagem: ""},
+        {url: "https://youtu.be/ZdeGbe0nNoU", NomeArtista: ["Yery"],NomeMusica: "So I Lie", imagem: ""},
+        
+        {url: "https://youtu.be/skB6UDjrc7c", NomeArtista: ["AB6IX"],NomeMusica: "Cherry", imagem: ""},
+        {url: "https://youtu.be/OYWWnd9ACMI", NomeArtista: ["Key"],NomeMusica: "Bad Love", imagem: ""},
+        //{url: "https://youtu.be/0XLIJCSNTBA", NomeArtista: ["Aimer", "Young ill"],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/ocUmPzydRAU", NomeArtista: ["pida"],NomeMusica: "Endand", imagem: ""},
       ],
       data : "27/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/C65vFxEr-sk", NomeArtista: ["Parkmoonchi"],NomeMusica: "Move!", imagem: ""},
+        
+        {url: "https://youtu.be/JqylDtxB6Qw", NomeArtista: ["Yu SeungWoo"],NomeMusica: "I Wanna Fall In Love", imagem: ""},
+        {url: "https://youtu.be/7VzaE0bLGDY", NomeArtista: ["GYE0M"],NomeMusica: "Forgetless", imagem: ""},
+        {url: "https://youtu.be/Wx2atAsROJk", NomeArtista: ["FreezyBone"],NomeMusica: "Onestep", imagem: ""},
+        {url: "https://youtu.be/NJzhF1OESWI", NomeArtista: ["ViralAffair"],NomeMusica: "Align", imagem: ""},
+        {url: "https://youtu.be/FhrQiTCB6Pg", NomeArtista: ["Liquor","Deepin"],NomeMusica: "Knock Knock Knock", imagem: ""},
+        {url: "https://youtu.be/3AhUuG_r8jU", NomeArtista: ["Woody"],NomeMusica: "I hope you like it", imagem: ""},
+        {url: "https://youtu.be/FyYxEuiZztk", NomeArtista: ["Ciipher"],NomeMusica: "Blind", imagem: ""},
+        {url: "https://youtu.be/nY749HK2TTE", NomeArtista: ["Thama","Gsoul"],NomeMusica: "Blessed", imagem: ""},
       ],
       data : "28/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/VO-w8rLEgfE", NomeArtista: ["Park SeongYeon"],NomeMusica: "Call", imagem: ""},
+        {url: "https://youtu.be/XW78ONm9R6U", NomeArtista: ["Soup", "Hong Eunjin"],NomeMusica: "Srr", imagem: ""},
+        {url: "https://youtu.be/RqXFNPxhjlE", NomeArtista: ["Hot Issue"],NomeMusica: "Icons", imagem: ""},
+        {url: "https://youtu.be/qoqA-th1ZPE", NomeArtista: ["CL"],NomeMusica: "Lover Like Me", imagem: ""},
+        
+        {url: "https://youtu.be/pbqJMd4AAb4", NomeArtista: ["E'Last"],NomeMusica: "Dark Dream", imagem: ""},
+        {url: "https://youtu.be/oKOMpeI9pxE", NomeArtista: ["Kang Seungwon", "Zion.T"],NomeMusica: "20th century peoples", imagem: ""},
+        {url: "https://youtu.be/itNm2_xcXD8", NomeArtista: ["NaungJae"],NomeMusica: "Drama", imagem: ""},
+        {url: "https://youtu.be/fI8KZWDuse4", NomeArtista: ["naru"],NomeMusica: "Spring Days", imagem: ""},
+        {url: "https://youtu.be/8bOuVOM5y5Y", NomeArtista: ["BJR"],NomeMusica: "Leaving You", imagem: ""},
+        {url: "https://youtu.be/WKk2X96k4X0", NomeArtista: ["Brown Tigger", "Layone", "Basick"],NomeMusica: "Open up the shutters", imagem: ""},
+        {url: "https://youtu.be/ejnXKjB_M60", NomeArtista: ["Kim Feel"],NomeMusica: "Like the first moment i met you", imagem: ""},
+        {url: "https://youtu.be/voYUE8IXOe0", NomeArtista: ["Onesun","DJ Use-up", "Gokim", "Smoozee", "Vimoka"],NomeMusica: "Overcome", imagem: ""},
+        {url: "https://youtu.be/FgTr__j1m_k", NomeArtista: ["Kim Woojin"],NomeMusica: "In my space", imagem: ""},
+        //{url: "https://youtu.be/cau6FhCodwU", NomeArtista: ["Hwaja"],NomeMusica: "", imagem: ""},
         
       ],data : "29/09"}
       );
   
       week.push({musicas: [
-        {url: "", NomeArtista: [""],NomeMusica: "", imagem: ""},
+        {url: "https://youtu.be/gbzUCi7iSBc", NomeArtista: ["Janet Suhh"],NomeMusica: "Us, in Memories", imagem: ""},
+        {url: "https://youtu.be/IeCt6iGYw4I", NomeArtista: ["Yukika"],NomeMusica: "Tokyo Lights", imagem: ""},
+        {url: "https://youtu.be/5D8GAJc6Fro", NomeArtista: ["1sagain","Swan"],NomeMusica: "Call This Love", imagem: ""},
+        {url: "https://youtu.be/VtrwmALIUAo", NomeArtista: ["Conut"],NomeMusica: "Dreaming Cat", imagem: ""},
+        
+        {url: "https://youtu.be/3YqPKLZF_WU", NomeArtista: ["Coldplay","BTS"],NomeMusica: "My Universe", imagem: ""},
+        {url: "https://youtu.be/CDwsapNpDz0", NomeArtista: ["The Wild idol"],NomeMusica: "Born to be wild", imagem: ""},
+        {url: "https://youtu.be/1yaw5ZJsFM0", NomeArtista: ["ADOY"],NomeMusica: "Antihero", imagem: ""},
+        {url: "https://youtu.be/uLnm1-b01_k", NomeArtista: ["Kim Junhwi"],NomeMusica: "I′ll never stop dreaming", imagem: ""},
+        {url: "https://youtu.be/sAHm93XrpZE", NomeArtista: ["KIM KYUNG ROK","V.O.S"],NomeMusica: "My Person", imagem: ""},
         ],data : "30/09"}
       );
   
